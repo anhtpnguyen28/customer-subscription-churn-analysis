@@ -25,7 +25,4 @@ Public subscription dataset including customer plans, usage behavior, and churn 
 ## Status
 In progress
 
-## Key Metrics
-- Churn Rate: Percentage of customers who canceled their subscription
-- Retention Rate: Percentage of customers who remained subscribed
-- Average Tenure: Average number of months customers stayed before churn
+
