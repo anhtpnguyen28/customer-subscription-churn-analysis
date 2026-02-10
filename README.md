@@ -23,6 +23,6 @@ Public subscription dataset including customer plans, usage behavior, and churn 
 - Are payment or support issues linked to churn?
 
 ## Status
-In progress
+- SQL analysis completed. Documentation will be updated after EDA and dashboarding.
 
 
