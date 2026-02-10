@@ -8,24 +8,19 @@
 -- Monthly churn rate = churned customers / total customers
 
 WITH base AS (
-  SELECT
-    DATE_TRUNC('month', signup_date) AS month,
-    user_id,
-    churn
-  FROM customers
-),
-agg AS (
-  SELECT
-    month,
-    COUNT(DISTINCT user_id) AS total_customers,
-    COUNT(DISTINCT CASE WHEN churn = 'Yes' THEN customer_id END) AS churned_customers
-  FROM base
-  GROUP BY month
+    SELECT
+        DATE_TRUNC('month', signup_date) AS signup_month,
+        user_id,
+        churn
+    FROM customer_subscriptions
 )
+
 SELECT
-  month,
-  churned_customers,
-  total_customers,
-  churned_customers * 1.0 / total_customers AS churn_rate
-FROM agg
-ORDER BY month;
+    signup_month,
+    COUNT(DISTINCT user_id) AS total_users,
+    COUNT(DISTINCT CASE WHEN churn = 'Yes' THEN user_id END) AS churned_users,
+    COUNT(DISTINCT CASE WHEN churn = 'Yes' THEN user_id END) * 1.0 
+        / COUNT(DISTINCT user_id) AS churn_rate
+FROM base
+GROUP BY signup_month
+ORDER BY signup_month;
