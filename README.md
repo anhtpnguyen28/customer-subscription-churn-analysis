@@ -22,7 +22,14 @@ Public subscription dataset including customer plans, usage behavior, and churn 
 - What usage patterns are associated with churn?
 - Are payment or support issues linked to churn?
 
-## Status
-- SQL analysis completed. Documentation will be updated after EDA and dashboarding.
+## Key Insights
+- Low engagement strongly predicts churn
+- Early lifecycle customers have elevated churn risk
+- Payment failures significantly increase churn probability
+- Churn is predictable and preventable
 
-
+## Business Recommendations
+- Strengthen onboarding and early engagement
+- Implement billing retry automation
+- Segment customers by churn risk
+- Deploy targeted retention campaigns
