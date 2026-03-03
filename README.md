@@ -33,3 +33,9 @@ Public subscription dataset including customer plans, usage behavior, and churn 
 - Implement billing retry automation
 - Segment customers by churn risk
 - Deploy targeted retention campaigns
+
+## Next Steps
+- Build churn prediction model
+- Quantify revenue impact of churn
+- Segment customers by churn risk
+- Design retention intervention experiments
